@@ -1,4 +1,4 @@
-<Files .env>
+<Files ~ ".env|app.php">
     Order allow,deny
     Deny from all
 </Files>

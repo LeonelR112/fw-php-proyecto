@@ -5,15 +5,14 @@
     });
 
     include "./routers/middleware.php";
-
-
-    //carga de APIs
     include "./routers/api.php";
 
     /**
      * Se escribe la ruta en el primer parametro y en el segundo, el nombre de la clase controlador, separado por un @ y el método que se ejecutará
      * $Router->tipoDePeticiónHttp('ruta', 'controlador@metodo')
      */
+
+    ### Rutas ###
     $Router->get("/", "MainController@renderIndex");
 
 

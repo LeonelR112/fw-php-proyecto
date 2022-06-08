@@ -4,7 +4,12 @@
  * $Router->before("GET|POST", ".*" ,function(){});
  * 
  */
+
     $Router->before("GET|POST", ".*" ,function(){
+        
+    });
+
+    $Router->before("GET|POST", "/api/.*" ,function(){
         
     });
 ?>
