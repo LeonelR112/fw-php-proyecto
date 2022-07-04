@@ -42,7 +42,8 @@
         }
     }
 
-    function redirectTo(string $url){
-
+    function redirectTo(string $url = ""){
+        header("location: " . MAIN_URL . $url);
+        exit;
     }
 ?>

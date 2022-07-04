@@ -9,12 +9,12 @@
 
     /**
      * Se escribe la ruta en el primer parametro y en el segundo, el nombre de la clase controlador, separado por un @ y el método que se ejecutará
-     * $Router->tipoDePeticiónHttp('ruta', 'controlador@metodo')
+     * $Router->tipoDePeticiónHttp('ruta', 'controlador@metodo'). Por recomendación, las clases deberian ser estáticas (static class)
      */
 
     ### Rutas ###
     $Router->get("/", "MainController@renderIndex");
-
+    
 
     $Router->run();
 ?>

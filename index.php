@@ -1,6 +1,7 @@
 <?php
     ob_start();
     require_once "./libs/helpers/app_autoload.php";
+    require_once "./libs/helpers/helpers_varios.php";
     require_once "./vendor/autoload.php";
     $dotenv = Dotenv\Dotenv::createImmutable(__DIR__, '.env');
     $dotenv->load();
