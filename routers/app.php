@@ -13,7 +13,9 @@
      */
 
     ### Rutas ###
-    $Router->get("/", "MainController@renderIndex");
+    $Router->get("/", function(){
+        echo "Main page";
+    });
     
 
     $Router->run();

@@ -1,22 +1,22 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
+        'pretty_version' => 'dev-master',
+        'version' => 'dev-master',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => NULL,
+        'reference' => 'a690f5e482595069b8cd88ce0bf9c136f8f702ff',
         'name' => '__root__',
         'dev' => true,
     ),
     'versions' => array(
         '__root__' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => NULL,
+            'reference' => 'a690f5e482595069b8cd88ce0bf9c136f8f702ff',
             'dev_requirement' => false,
         ),
         'bramus/router' => array(
@@ -44,6 +44,15 @@
             'install_path' => __DIR__ . '/../eoghanobrien/php-simple-mail',
             'aliases' => array(),
             'reference' => '9b8d4c01c7c0cac769ba42ccd08a73ecee855825',
+            'dev_requirement' => false,
+        ),
+        'firebase/php-jwt' => array(
+            'pretty_version' => 'v6.2.0',
+            'version' => '6.2.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../firebase/php-jwt',
+            'aliases' => array(),
+            'reference' => 'd28e6df83830252650da4623c78aaaf98fb385f3',
             'dev_requirement' => false,
         ),
         'graham-campbell/result-type' => array(

@@ -18,6 +18,7 @@ return array(
     'Http\\Message\\' => array($vendorDir . '/php-http/message-factory/src'),
     'Hashids\\' => array($vendorDir . '/hashids/hashids/src'),
     'GrahamCampbell\\ResultType\\' => array($vendorDir . '/graham-campbell/result-type/src'),
+    'Firebase\\JWT\\' => array($vendorDir . '/firebase/php-jwt/src'),
     'Dotenv\\' => array($vendorDir . '/vlucas/phpdotenv/src'),
     'DeepCopy\\' => array($vendorDir . '/myclabs/deep-copy/src/DeepCopy'),
 );

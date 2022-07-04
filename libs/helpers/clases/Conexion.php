@@ -9,7 +9,8 @@
                 return $link;
             }
             catch(PDOException $e){
-                
+                logMsgError("No se pudo establecer una conexión a la bdd: (Motivo)" . $e->getMessage());
+                printMensajeAlertaCritica("Ha ocurrido un error al conectarse a la base de datos. Ver en archivos log_errors");
                 die;
             }
         }
