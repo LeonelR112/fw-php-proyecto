@@ -5,7 +5,7 @@
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'a690f5e482595069b8cd88ce0bf9c136f8f702ff',
+        'reference' => '5025e9c51ae5b972af5f334567bc43f1bc802a35',
         'name' => '__root__',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'a690f5e482595069b8cd88ce0bf9c136f8f702ff',
+            'reference' => '5025e9c51ae5b972af5f334567bc43f1bc802a35',
             'dev_requirement' => false,
         ),
         'bramus/router' => array(
@@ -71,6 +71,15 @@
             'install_path' => __DIR__ . '/../hashids/hashids',
             'aliases' => array(),
             'reference' => '8cab111f78e0bd9c76953b082919fc9e251761be',
+            'dev_requirement' => false,
+        ),
+        'monolog/monolog' => array(
+            'pretty_version' => '2.8.0',
+            'version' => '2.8.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../monolog/monolog',
+            'aliases' => array(),
+            'reference' => '720488632c590286b88b80e62aa3d3d551ad4a50',
             'dev_requirement' => false,
         ),
         'mpdf/mpdf' => array(
@@ -135,6 +144,12 @@
             'aliases' => array(),
             'reference' => 'd49695b909c3b7628b6289db5479a1c204601f11',
             'dev_requirement' => false,
+        ),
+        'psr/log-implementation' => array(
+            'dev_requirement' => false,
+            'provided' => array(
+                0 => '1.0.0 || 2.0.0 || 3.0.0',
+            ),
         ),
         'setasign/fpdi' => array(
             'pretty_version' => 'v2.3.6',

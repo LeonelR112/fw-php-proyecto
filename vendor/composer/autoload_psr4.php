@@ -15,6 +15,7 @@ return array(
     'Psr\\Http\\Message\\' => array($vendorDir . '/psr/http-message/src'),
     'PhpOption\\' => array($vendorDir . '/phpoption/phpoption/src/PhpOption'),
     'Mpdf\\' => array($vendorDir . '/mpdf/mpdf/src'),
+    'Monolog\\' => array($vendorDir . '/monolog/monolog/src/Monolog'),
     'Http\\Message\\' => array($vendorDir . '/php-http/message-factory/src'),
     'Hashids\\' => array($vendorDir . '/hashids/hashids/src'),
     'GrahamCampbell\\ResultType\\' => array($vendorDir . '/graham-campbell/result-type/src'),

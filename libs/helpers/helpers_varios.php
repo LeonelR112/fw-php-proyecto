@@ -1,43 +1,32 @@
 <?php
 
-    // Obtener archivos del resource
-    /**
-     * Estos helpers traen o imprimen el link directo al archivo dentro de la carpeta resources, tiene un parámetro para indicar el archivo o ruta del archivo
-     * y el segundo parámetro especificar si al obtener el archivo/url poner un parámetro aleatorio para no usar el cache del navegador y ver los cambios en
-     * el momento.
-     */
+    //atajo a carpetas
+    function resources(string $ruta){
+        return MAIN_URL . "resources/" . $ruta;
+    } 
 
-    function printCssFileDir(string $dir_file, bool $cache = true){
-        echo MAIN_URL . "resources/css/" . $dir_file . ($cache ? "" : "?v" . md5(time()));
+    function assets(string $ruta){
+        return MAIN_URL . "resources/assets/" . $ruta;
+    } 
+
+    function css(string $ruta){
+        return MAIN_URL . "resources/css/" . $ruta;
+    } 
+
+    function js(string $ruta){
+        return MAIN_URL . "resources/js/" . $ruta;
+    }
+    // fin atajos a carpetas
+
+    //obtener un archivo del resource
+    function cssFile(string $dirname, bool $cache = true){
+        print '<link rel="stylesheet" href="'. MAIN_URL .'resources/css/'. $dirname .'.css'. ($cache ? "" : "?v" . md5(time())) .'">';
     }
 
-    function getFileCSS(string $dir_file, bool $cache = true){
-        if($cache){
-            echo '<link rel="stylesheet" href="' . MAIN_URL . 'resources/css/'. $dir_file .'">';
-        }
-        else{
-            echo '<link rel="stylesheet" href="' . MAIN_URL . 'resources/css/'. $dir_file .'?v'. md5(time()) .'">';
-        }
+    function jsFile(string $dirname, bool $cache = true){
+        print '<script src="'. MAIN_URL .'resources/js/'. $dirname .'.js'. ($cache ? "" : "?v" . md5(time())) .'"></script';
     }
-
-    function printJSfileDir(string $dir_file, bool $cache = true){
-        echo MAIN_URL . "resources/js/" . $dir_file . ($cache ? "" : "?v" . md5(time()));
-    }
-
-    function getFileJS(string $dir_file, bool $cache = true){
-        if($cache){
-            echo '<script src="' . MAIN_URL . 'resources/js/'. $dir_file .'"></script>';
-        }
-        else{
-            echo '<script src="' . MAIN_URL . 'resources/js/'. $dir_file .'?v'. md5(time()) .'"></script>';
-        }
-    }
-
-    function assetsLink(string $dir_file, $cache = true){
-        echo MAIN_URL . "resources/assets/" . $dir_file . ($cache ? "" : "?v" . md5(time()));
-    }
-
-    // fin archivos del resource
+    //fin obtener un archivo del resource
 
     //API archivos
     function obtenerHandlerApi(string $nombre_handlerApi){

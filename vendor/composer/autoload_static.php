@@ -37,6 +37,7 @@ class ComposerStaticInit940fd889c4d5090dba4a460e0f7401f1
         'M' => 
         array (
             'Mpdf\\' => 5,
+            'Monolog\\' => 8,
         ),
         'H' => 
         array (
@@ -94,6 +95,10 @@ class ComposerStaticInit940fd889c4d5090dba4a460e0f7401f1
         'Mpdf\\' => 
         array (
             0 => __DIR__ . '/..' . '/mpdf/mpdf/src',
+        ),
+        'Monolog\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
         ),
         'Http\\Message\\' => 
         array (
