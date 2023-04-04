@@ -45,25 +45,6 @@
         print $response;
     }
 
-    //logs
-    function logMsgSystem(string $mensaje){
-        $fp = fopen(__DIR__ . "/../../logs/log_system.txt", "a+");
-        $DateTime = new DateTime('now');
-        $format = $DateTime->format("[d-m-Y H:i:s]");
-        fwrite($fp, $format . $mensaje . "\n");
-        fclose($fp);
-    }
-
-    function logMsgError(string $mensaje){
-        $fp = fopen(__DIR__ . "/../../logs/log_errors.txt", "a+");
-        $DateTime = new DateTime('now');
-        $format = $DateTime->format("[d-m-Y H:i:s]");
-        fwrite($fp, $format . $mensaje . "\n");
-        fclose($fp);
-    }
-
-    //fin logs
-
     //mensajes de alerta
     function printMensajeAlertaCritica(string $mensaje){
         echo "
@@ -124,8 +105,25 @@
         }
     }
 
-    function redirectTo(string $url = ""){
-        header("location: " . MAIN_URL . $url);
-        exit;
+    function redirectTo(string $url){
+        try{
+            //si la url = "", se redirecciona a la homepage
+            header("location: " . MAIN_URL . $url);
+            exit;
+        }
+        catch(Exception $e){
+            Logger::error("Helpers > redirecTo - " . $e->getMessage());
+            return false;
+        }
     }
+
+    // Strings
+    function truncateString($string, $length, $dots = "...") {
+        return (strlen($string) > $length) ? substr($string, 0, $length - strlen($dots)) . $dots : $string;
+    }
+
+    function capitalizeStrings($valor){
+        return ucwords($valor);
+    }
+    // Fin strings
 ?>
