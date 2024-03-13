@@ -25,24 +25,11 @@ class ComposerStaticInit940fd889c4d5090dba4a460e0f7401f1
         ),
         'P' => 
         array (
-            'Psr\\Log\\' => 8,
             'PhpOption\\' => 10,
-        ),
-        'M' => 
-        array (
-            'Monolog\\' => 8,
-        ),
-        'H' => 
-        array (
-            'Hashids\\' => 8,
         ),
         'G' => 
         array (
             'GrahamCampbell\\ResultType\\' => 26,
-        ),
-        'F' => 
-        array (
-            'Firebase\\JWT\\' => 13,
         ),
         'D' => 
         array (
@@ -67,29 +54,13 @@ class ComposerStaticInit940fd889c4d5090dba4a460e0f7401f1
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-ctype',
         ),
-        'Psr\\Log\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
-        ),
         'PhpOption\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpoption/phpoption/src/PhpOption',
         ),
-        'Monolog\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
-        ),
-        'Hashids\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/hashids/hashids/src',
-        ),
         'GrahamCampbell\\ResultType\\' => 
         array (
             0 => __DIR__ . '/..' . '/graham-campbell/result-type/src',
-        ),
-        'Firebase\\JWT\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/firebase/php-jwt/src',
         ),
         'Dotenv\\' => 
         array (

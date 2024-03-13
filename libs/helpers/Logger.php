@@ -1,7 +1,7 @@
 <?php
     abstract class Logger{
         private const CODE_CLEAR = 13975;
-        private const CURRENT_DATETIME = "";
+        private const DIR_LOG_FILE_BLANK = __DIR__ . "/../../logs/status_envios.txt";
         private const DIR_LOG_FILE = __DIR__ . "/../../logs/log_app.txt";
         private const DIR_LOG_INFOS = __DIR__ . "/../../logs/log_info.txt";
 
@@ -102,6 +102,21 @@
             }
             catch(PDOException $e){
                 echo "Reseteo de logger fallido: " . $e->getMessage();
+            }
+        }
+
+        static function logStatusMessage(string $message, string $comentario = ""){
+            $DateTimeNow = new DateTime('now');
+            $fp = fopen(self::DIR_LOG_FILE_BLANK, "a+");;
+            $format = $DateTimeNow->format("[d-m-Y H:i:s] : ");
+            $escritura = $format . $message . ($comentario != "" ? " | " . $comentario : "");
+            if(fwrite($fp, $escritura . "\n")){
+                fclose($fp);
+                return true;
+            }
+            else{
+                fclose($fp);
+                return false;
             }
         }
 

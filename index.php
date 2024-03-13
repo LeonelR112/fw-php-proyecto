@@ -7,6 +7,5 @@
     require_once __DIR__ . "/libs/helpers/clases/Conexion.php";
     require_once __DIR__ . "/config/autoFuncLoader.php";
     require_once __DIR__ . "/config/app.php";
-    require_once __DIR__ . "/libs/view.php";
     require_once __DIR__ . "/routers/app.php";
 ?>
