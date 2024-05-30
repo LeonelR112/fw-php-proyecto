@@ -4,6 +4,7 @@
     //directorias para autocargas
     $loader->addDirectory(__DIR__ . '/../app/');
     $loader->addDirectory(__DIR__ . '/../libs');
+    $loader->addDirectory(__DIR__ . '/../api');
 
     $loader->setTempDirectory(__DIR__ . '/../cache/loader');
     $loader->register();
